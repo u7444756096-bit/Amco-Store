@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Amco Store</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <style>
     body {
       font-family: "Poppins", sans-serif;
@@ -26,12 +30,35 @@
       font-size: 2rem;
     }
 
+    header p {
+      margin: 0;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
     .hero {
       background: url("banniere.jpg") center/cover no-repeat;
       text-align: center;
       padding: 100px 20px;
       color: white;
       background-color: #222;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .hero h2,
+    .hero p {
+      position: relative;
+      z-index: 1;
     }
 
     .hero h2 {
@@ -62,6 +89,7 @@
 
     .product:hover {
       transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
 
     .product img {
@@ -69,6 +97,36 @@
       max-width: 250px;
       height: auto;
       border-radius: 8px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .image-hover {
+      position: relative;
+      width: 100%;
+      max-width: 250px;
+      margin: 0 auto;
+    }
+
+    .image-hover img {
+      width: 100%;
+      border-radius: 8px;
+      transition: opacity 0.4s ease;
+    }
+
+    .image-hover .hover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+    }
+
+    .image-hover:hover .hover {
+      opacity: 1;
+    }
+
+    .image-hover:hover .main {
+      opacity: 0;
     }
 
     .product h3 {
@@ -84,17 +142,18 @@
 
     .product a {
       display: inline-block;
-      background-color: #111;
+      background: linear-gradient(90deg, #111, #333);
       color: white;
       padding: 10px 20px;
       border-radius: 5px;
       text-decoration: none;
       font-weight: 500;
-      transition: background 0.3s ease;
+      transition: all 0.3s ease;
     }
 
     .product a:hover {
-      background-color: #333;
+      background: linear-gradient(90deg, #333, #111);
+      transform: scale(1.05);
     }
 
     footer {
@@ -104,6 +163,36 @@
       padding: 15px;
       font-size: 0.9rem;
       margin-top: 40px;
+    }
+
+    /* ✅ Size Buttons */
+    .sizes {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .size-btn {
+      background: white;
+      border: 2px solid #333;
+      border-radius: 5px;
+      padding: 8px 15px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .size-btn.selected {
+      background: #333;
+      color: white;
+      text-decoration: line-through;
+      transform: scale(1.05);
+    }
+
+    .size-btn:hover {
+      background: #111;
+      color: white;
     }
 
     @media (max-width: 600px) {
@@ -119,7 +208,8 @@
 <body>
 
   <header>
-    <h1>Amco Store</h1>
+    <h1>Amco</h1>
+    <p>Style. Simplicity. Passion.</p>
   </header>
 
   <section class="hero">
@@ -128,39 +218,111 @@
   </section>
 
   <section class="products">
-    <!-- 🛍️ Produit 1 -->
+
+    <!-- 🛍️ Product 1 -->
     <div class="product">
       <img src="tshirt-astronaut.jpeg" alt="T-shirt Astronaut" />
       <h3>T-shirt Astronaut</h3>
-      <p>Price: $15</p>
-      <a href="mailto:u7444756096@gmail.com?subject=Order%20T-shirt%20Astronaut&body=Hello,%20I%20would%20like%20to%20order%20the%20T-shirt%20Astronaut.">Order</a>
+      <p>Price: $13</p>
+
+      <div class="sizes">
+        <button class="size-btn" data-size="S">S</button>
+        <button class="size-btn" data-size="M">M</button>
+        <button class="size-btn" data-size="L">L</button>
+        <button class="size-btn" data-size="XL">XL</button>
+      </div>
+
+      <a class="order-btn" href="#">Order</a>
     </div>
+
+    <!-- 🧥 Product 2 -->
     <div class="product">
-      <img src="sweatshirt-air-force.jpeg" alt="Sweatshirt Air Force" />
+      <div class="image-hover">
+        <img class="main" src="sweatshirt-air-force-front.jpeg" alt="Sweatshirt Air Force - Front" />
+        <img class="hover" src="sweatshirt-air-force-back.jpeg" alt="Sweatshirt Air Force - Back" />
+      </div>
       <h3>Sweatshirt Air Force</h3>
       <p>Price: $30</p>
-      <a href="mailto:u7444756096@gmail.com?subject=Order%20Sweatshirt%20Air%20Force&body=Hello,%20I%20would%20like%20to%20order%20the%20Sweatshirt%20Air%20Force.">Order</a>
+      <h4>Coming soon</h4>
+
+      <div class="sizes">
+        <button class="size-btn" data-size="S">S</button>
+        <button class="size-btn" data-size="M">M</button>
+        <button class="size-btn" data-size="L">L</button>
+        <button class="size-btn" data-size="XL">XL</button>
+      </div>
+
+      <a class="order-btn" href="#">Order</a>
     </div>
-    <div class="product"> 
+
+    <!-- 🩳 Product 3 -->
+    <div class="product">
       <img src="short-air-force.png" alt="Short Air Force" />
       <h3>Short Air Force</h3>
       <p>Price: $10</p>
-      <a href="mailto:u7444756096@gmail.com?subject=Order%20Short%20Air%20Force&body=Hello,%20I%20would%20like%20to%20order%20the%20Short%20Air%20Force.">Order</a>
+      <h4>Coming soon</h4>
+
+      <div class="sizes">
+        <button class="size-btn" data-size="S">S</button>
+        <button class="size-btn" data-size="M">M</button>
+        <button class="size-btn" data-size="L">L</button>
+        <button class="size-btn" data-size="XL">XL</button>
+      </div>
+
+      <a class="order-btn" href="#">Order</a>
     </div>
-    <!-- ➕ Pour ajouter un nouveau produit, copie ce bloc ci-dessous -->
-    <!--
+
+    <!-- 👕 Product 4 -->
     <div class="product">
-      <img src="NOM-DE-TON-IMAGE.jpg" alt="Nom du produit" /
-      <h3>Nom du produit</h3>
-      <p>Prix : XX €</p>
-      <a href="mailto:u7444756096@gmail.com?subject=Order%20Nom%20du%20produit&body=Hello,%20I%20would%20like%20to%20order%20the%20produit.">Order</a>
+      <div class="image-hover">
+        <img class="main" src="tshirt-los-angeles-front.jpeg" alt="T-shirt Los Angeles - Front" />
+        <img class="hover" src="tshirt-los-angeles-back.jpeg" alt="T-shirt Los Angeles - Back" />
+      </div>
+      <h3>T-shirt Los Angeles</h3>
+      <p>Price: $13</p>
+
+      <div class="sizes">
+        <button class="size-btn" data-size="S">S</button>
+        <button class="size-btn" data-size="M">M</button>
+        <button class="size-btn" data-size="L">L</button>
+        <button class="size-btn" data-size="XL">XL</button>
+      </div>
+
+      <a class="order-btn" href="#">Order</a>
     </div>
-    -->
+
   </section>
 
   <footer>
     &copy; 2025 Amco Store — All rights reserved
   </footer>
+
+  <script>
+    document.querySelectorAll('.product').forEach(product => {
+      const sizeButtons = product.querySelectorAll('.size-btn');
+      const orderBtn = product.querySelector('.order-btn');
+      let selectedSize = null;
+
+      sizeButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          sizeButtons.forEach(b => b.classList.remove('selected'));
+          btn.classList.add('selected');
+          selectedSize = btn.dataset.size;
+        });
+      });
+
+      orderBtn.addEventListener('click', (e) => {
+        if (!selectedSize) {
+          e.preventDefault();
+          alert('Please select a size before ordering.');
+          return;
+        }
+        const productName = product.querySelector('h3').innerText;
+        const mailto = `mailto:u7444756096@gmail.com?subject=Order%20${encodeURIComponent(productName)}&body=Hello,%20I%20would%20like%20to%20order%20the%20${encodeURIComponent(productName)}.%20My%20size%20is%20${selectedSize}.`;
+        orderBtn.href = mailto;
+      });
+    });
+  </script>
 
 </body>
 </html>
