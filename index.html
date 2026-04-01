@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Amco Store — Vêtements & streetwear de qualité</title>
-  <meta name="description" content="Amco Store — Collections de t-shirts, sweatshirts et shorts. Style, simplicité et qualité. Livraison et commande par e‑mail.">
+  <title>Amco Store — Quality apparel & streetwear</title>
+  <meta name="description" content="Amco Store — Collections of t-shirts, sweatshirts and shorts. Clean design and quality materials. Order by email.">
   <link rel="icon" href="/favicon.ico">
 
   <!-- Google Fonts -->
@@ -58,8 +58,7 @@
     nav a{color:var(--text);text-decoration:none;font-weight:600;letter-spacing:0.3px; padding:6px 8px; border-radius:8px; transition:color var(--transition), background var(--transition)}
   nav a:hover{color:var(--accent-dark); background:rgba(0,0,0,0.04)}
 
-    .online-counter{display:flex;align-items:center;gap:8px;font-size:0.85rem;color:var(--muted)}
-  .online-dot{display:inline-block;width:10px;height:10px;background:var(--accent);border-radius:50%;box-shadow:0 0 8px rgba(0,0,0,0.12)}
+    /* online counter removed from UI */
 
     @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.6}}
 
@@ -112,7 +111,7 @@
         <span class="logo" aria-hidden="false"><img src="Marque.jpg" alt="Marque" /></span>
         <div>
           <h1>Amco Store</h1>
-          <p>Style • Simplicité • Passion</p>
+          <p>Style • Simplicity • Passion</p>
         </div>
       </div>
 
@@ -123,21 +122,18 @@
         </ul>
       </nav>
       
-      <div class="online-counter">
-        <span class="online-dot"></span>
-        <span id="online-count">0</span>
-      </div>
+      <!-- online counter removed -->
     </div>
   </header>
 
   <main class="container">
     <section class="hero" aria-labelledby="hero-title">
       <div class="left">
-        <h2 id="hero-title">Vêtements bien pensés, pour un style affirmé</h2>
-        <p>Collections limitées de t-shirts, sweatshirts et shorts — design épuré, matériaux choisis.</p>
+        <h2 id="hero-title">Well-designed clothing for a confident style</h2>
+        <p>Limited collections of t-shirts, sweatshirts and shorts — clean design, carefully selected materials.</p>
         <div class="cta">
-          <a class="btn" href="#collections">Voir la collection</a>
-          <a class="btn ghost" href="contact.html">Nous contacter</a>
+          <a class="btn" href="#collections">View collection</a>
+          <a class="btn ghost" href="contact.html">Contact us</a>
         </div>
       </div>
       <div class="right" aria-hidden="true">
@@ -146,8 +142,8 @@
     </section>
 
     <section id="collections">
-      <h3 style="margin-top:8px">Nos produits</h3>
-  <p style="color:var(--muted);margin:6px 0 18px">Sélectionnez une taille puis cliquez sur Commander pour envoyer une demande par e‑mail.</p>
+  <h3 style="margin-top:8px">Our products</h3>
+  <p style="color:var(--muted);margin:6px 0 18px">Select a size then click Order to send a request by email.</p>
 
       <div class="products" role="list">
 
@@ -160,12 +156,12 @@
             <img class="hover" src="sweatshirt-los-angeles-back.jpeg" alt="Sweatshirt Los Angeles dos" style="position:absolute;opacity:0;transition:opacity .3s;max-width:220px;border-radius:8px" />
           </div>
           <div class="card-body">
-            <h4 id="p2-title" style="margin:0">Sweatshirt Los Angeles</h4>
+            <h4 id="p2-title" style="margin:0">Los Angeles Sweatshirt</h4>
             <div style="display:flex;align-items:center;gap:8px;justify-content:center">
-              <div class="price">30 €</div>
-              <div class="badge">En stock</div>
+              <div class="price">25 $</div>
+              <div class="badge">In stock</div>
             </div>
-            <div class="sizes" role="group" aria-label="Tailles disponibles">
+            <div class="sizes" role="group" aria-label="Available sizes">
               <button class="size-btn" data-size="XS" aria-pressed="false">XS</button>
               <button class="size-btn" data-size="S" aria-pressed="false">S</button>
               <button class="size-btn" data-size="M" aria-pressed="false">M</button>
@@ -174,7 +170,7 @@
             </div>
           </div>
           <div class="card-footer">
-            <a class="btn order-btn" href="#" data-email="u7444756096@gmail.com">Commander</a>
+            <a class="btn order-btn" href="#" data-email="u7444756096@gmail.com">Order</a>
           </div>
         </article>
 
@@ -187,12 +183,12 @@
             <img class="hover" src="tshirt-los-angeles-back.jpeg" alt="T-shirt Los Angeles dos" style="position:absolute;opacity:0;transition:opacity .3s;max-width:220px;border-radius:8px" />
           </div>
           <div class="card-body">
-            <h4 id="p4-title" style="margin:0">T-shirt Los Angeles</h4>
+            <h4 id="p4-title" style="margin:0">Los Angeles T-shirt</h4>
             <div style="display:flex;align-items:center;gap:8px;justify-content:center">
-              <div class="price">15 €</div>
-              <div class="badge">En stock</div>
+              <div class="price">15 $</div>
+              <div class="badge">In stock</div>
             </div>
-            <div class="sizes" role="group" aria-label="Tailles disponibles">
+            <div class="sizes" role="group" aria-label="Available sizes">
               <button class="size-btn" data-size="XS" aria-pressed="false">XS</button>
               <button class="size-btn" data-size="S" aria-pressed="false">S</button>
               <button class="size-btn" data-size="M" aria-pressed="false">M</button>
@@ -201,7 +197,7 @@
             </div>
           </div>
           <div class="card-footer">
-            <a class="btn order-btn" href="#" data-email="u7444756096@gmail.com">Commander</a>
+            <a class="btn order-btn" href="#" data-email="u7444756096@gmail.com">Order</a>
           </div>
         </article>
 
@@ -213,8 +209,8 @@
 
   <footer>
     <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
-      <div>&copy; 2025 Amco Store — Tous droits réservés</div>
-      <div style="color:var(--muted)">Fait avec soin • Paiement à la livraison</div>
+  <div>&copy; 2025 Amco Store — All rights reserved</div>
+  <div style="color:var(--muted)">Made with care • Cash on delivery</div>
     </div>
   </footer>
 
@@ -237,43 +233,7 @@
     const app = initializeApp(firebaseConfig);
     const database = getDatabase(app);
 
-    // Generate unique session ID
-    const sessionId = 'user_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
-    const onlineCountElement = document.getElementById('online-count');
-
-    // Add current user to online list
-    const userRef = ref(database, 'online_users/' + sessionId);
-    set(userRef, { timestamp: new Date().getTime() });
-
-    // Listen to online users count
-    const onlineRef = ref(database, 'online_users');
-    onValue(onlineRef, (snapshot) => {
-      const data = snapshot.val();
-      const count = data ? Object.keys(data).length : 0;
-      onlineCountElement.textContent = count;
-    });
-
-    // Remove user when leaving
-    window.addEventListener('beforeunload', () => {
-      remove(userRef);
-    });
-
-    // Clean up inactive users (older than 5 minutes)
-    setInterval(() => {
-      get(onlineRef).then((snapshot) => {
-        if (snapshot.exists()) {
-          const data = snapshot.val();
-          const now = new Date().getTime();
-          const timeout = 5 * 60 * 1000; // 5 minutes
-          
-          Object.keys(data).forEach(id => {
-            if (now - data[id].timestamp > timeout) {
-              remove(ref(database, 'online_users/' + id));
-            }
-          });
-        }
-      });
-    }, 60000); // Check every minute
+    // (online users tracking removed)
   </script>
 
   <script>
@@ -299,16 +259,16 @@
       orderBtn.addEventListener('click', (e) => {
         if (!selectedSize) {
           e.preventDefault();
-          // Friendly French message
-          window.alert('Veuillez sélectionner une taille avant de commander.');
+          // Friendly English message
+          window.alert('Please select a size before ordering.');
           return;
         }
 
         const productName = card.querySelector('h4').innerText;
         const email = orderBtn.dataset.email;
-        const subject = `Commande - ${productName}`;
-        const body = `Bonjour,\n\nJe souhaite commander : ${productName}.\nTaille : ${selectedSize}.\n\nMerci de me confirmer la disponibilité et les modalités d'expédition.`;
-        const mailto = `mailto:${encodeURIComponent(email)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  const subject = `Order - ${productName}`;
+  const body = `Hello,\n\nI would like to order: ${productName}.\nSize: ${selectedSize}.\n\nPlease confirm availability and shipping details.`;
+  const mailto = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
         // Set href then allow navigation
         orderBtn.href = mailto;
       });
