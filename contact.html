@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Amco Store</title>
+  <meta name="description" content="Contact — Amco Store. To place an order or ask a question, write to us.">
+  <link rel="icon" href="/favicon.ico">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: transparent;
+      --card: #ffffff;
+      --muted: #243443;
+      --accent: #000000;
+      --accent-dark: #111111;
+      --text: #0b0b0b;
+      --price: #1a1a1a;
+      --max-width: 1100px;
+      --radius: 12px;
+      --transition: 240ms cubic-bezier(.2,.9,.2,1);
+    }
+
+    *{box-sizing: border-box}
+    html,body{height:100%}
+    body{
+      font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      margin:0;
+      background:
+        radial-gradient(800px 300px at 6% 8%, rgba(36,64,67,0.06), transparent 24%),
+        linear-gradient(180deg, #ffffff 0%, #f3f6f7 100%);
+      color:var(--text); -webkit-font-smoothing:antialiased;
+      line-height:1.45;
+      -webkit-font-feature-settings: "ss01" on;
+      font-feature-settings: "ss01" on;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    .site-header{
+      background: rgba(255,255,255,0.92); border-bottom:1px solid rgba(47,64,82,0.06);
+      position: sticky; top:0; z-index:40; backdrop-filter: blur(4px);
+    }
+    .container{max-width:var(--max-width);margin:0 auto;padding:0 20px}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:20px 0}
+  .brand{display:flex;align-items:center;gap:14px}
+  .brand .logo{width:56px;height:56px;border-radius:8px;display:inline-block;overflow:hidden;flex:0 0 56px}
+  .brand .logo img{width:100%;height:100%;object-fit:contain;display:block}
+    .brand h1{font-size:1.15rem;margin:0;font-weight:700;letter-spacing:0.2px}
+    .brand p{margin:0;font-size:0.78rem;color:var(--muted)}
+
+    nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
+    nav a{color:var(--text);text-decoration:none;font-weight:600;letter-spacing:0.3px; padding:6px 8px; border-radius:8px; transition:color var(--transition), background var(--transition)}
+  nav a:hover{color:var(--accent-dark); background:rgba(0,0,0,0.04)}
+
+    footer{padding:32px 0;color:var(--muted);border-top:1px solid rgba(150,130,110,0.06);margin-top:36px}
+    footer .container{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <div class="brand">
+        <span class="logo" aria-hidden="false"><img src="Marque.jpg" alt="Marque" /></span>
+        <div>
+          <h1>Amco Store</h1>
+          <p>Style • Simplicity • Passion</p>
+        </div>
+      </div>
+
+      <nav aria-label="Navigation principale">
+        <ul>
+          <li><a href="index.html#collections">Collections</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="container" style="padding:48px 0">
+    <section id="contact" style="margin-top:8px;max-width:760px">
+  <h2>Contact</h2>
+  <p style="color:var(--muted);font-size:1.05rem">To place an order or ask a question, write to <a href="mailto:u7444756096@gmail.com">u7444756096@gmail.com</a>.</p>
+
+  <p style="margin-top:18px;color:var(--muted)">You can also return to the <a href="index.html">home page</a> to view our products.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+  <div>&copy; 2025 Amco Store — All rights reserved</div>
+  <div style="color:var(--muted)">Made with care • Cash on delivery</div>
+    </div>
+  </footer>
+</body>
+</html>
